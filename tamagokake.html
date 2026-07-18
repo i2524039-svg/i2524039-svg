@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>卵かけご飯</title>
+
+    <link rel="stylesheet" href="tamagokake.css">
+
+</head>
+
+<body>
+
+<!--==========================
+ハンバーガーメニュー
+===========================-->
+
+<div id="menu-bg"></div>
+
+<nav id="side-menu">
+
+    <button id="close">×</button>
+
+    <ul>
+
+        <li><a href="tamagokake.html">卵かけご飯</a></li>
+
+        <li><a href="hiyayakko.html">冷ややっこ</a></li>
+
+        <li><a href="medamayaki.html">目玉焼き</a></li>
+
+        <li><a href="misosiru.html">わかめの味噌汁</a></li>
+
+        <li><a href="teriyaki.html">鶏むね肉の照り焼き</a></li>
+
+        <li><a href="oyakodon.html">親子丼</a></li>
+
+    </ul>
+
+    <a href="index.html" class="top-btn">
+      
+<div class="top-box">
+
+    <a href="index.html" class="top-link">TOPへ戻る</a>
+
+</div>
+
+</nav>
+
+<!--==========================
+ヘッダー
+===========================-->
+
+<header>
+
+    <h1 class="logo">卵かけご飯</h1>
+
+    <div class="menu" id="open">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+</header>
+
+<main>
+
+<!--==========================
+メイン画像
+===========================-->
+<section class="hero">
+
+    <div class="hero-image">
+
+        <div class="tape blue"></div>
+
+        <img src="images/tmgkk.png" alt="卵かけご飯">
+
+    </div>
+
+    <div class="level">
+        難易度１　★☆☆
+    </div>
+
+</section>
+<!--==========================
+材料など
+===========================-->
+
+<section class="info">
+
+    <div class="box">
+
+        <h2>材料（一人分）</h2>
+
+        <hr>
+
+        <ul>
+
+            <li><span>・ご飯</span><span>お好きな量</span></li>
+
+            <li><span>・卵</span><span>１個</span></li>
+
+            <li><span>・しょうゆ</span><span>適量</span></li>
+
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h2>必要な道具</h2>
+
+        <hr>
+
+        <ul class="point">
+
+            <li>・お皿</li>
+
+            <li>・菜箸</li>
+
+            <li>・スプーン</li>
+
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h2>注目ポイント</h2>
+
+        <hr>
+
+        <ul class="point">
+
+            <li>🔥 火を使わない</li>
+
+            <li>🔪 包丁を使わない</li>
+
+            <li>⏰ ５分以内に完成</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!--==========================
+作り方
+===========================-->
+
+<section class="recipe">
+
+    <div class="left">
+
+        <h2>作り方</h2>
+
+        <hr>
+
+        <div class="step">
+
+            <p>
+                ① ご飯を茶碗によそいます。冷たいご飯でも作れますが、
+                温かいご飯がおすすめです。
+            </p>
+
+            <img src="wimages/gohan.png" alt="ご飯をよそう">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ② 卵を小皿に割ります。直接ご飯に割らず、
+                小皿に割ると殻が取りやすくなります。
+            </p>
+
+            <img src="wimages/niban.png" alt="卵を割る">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ③ 殻が入っていないことを確認したら、
+                ご飯の上に卵をのせます。
+            </p>
+
+            <img src="wimages/san.png" alt="卵をのせる">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ④ しょうゆをかけて完成です。
+                お好みでのりやかつお節をのせてもおいしいです。
+            </p>
+
+            <img src="wimages/yon.png" alt="完成">
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="tips">
+
+            <h3>調理のコツ</h3>
+
+            <hr>
+
+            <p>
+
+                卵は平らな場所で軽くコンと割ると
+                きれいに割れます。<br><br>
+
+                しょうゆは少しずつ入れると
+                味の調整がしやすいです。
+
+            </p>
+
+        </div>
+
+        <div class="trouble">
+
+            <h3>困ったときは</h3>
+
+            <hr>
+
+            <p>
+
+                <strong>Q.</strong> 醤油を入れすぎた！<br>
+
+                <strong>A.</strong> ご飯を少し足しましょう。<br><br>
+
+                <strong>Q.</strong> 殻が入った…<br>
+
+                <strong>A.</strong> 卵の殻で取ると取りやすいです。
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script>
+
+const open=document.getElementById("open");
+const close=document.getElementById("close");
+const menu=document.getElementById("side-menu");
+const bg=document.getElementById("menu-bg");
+
+open.onclick=function(){
+
+    menu.classList.add("show");
+    bg.classList.add("show");
+
+}
+
+close.onclick=function(){
+
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+
+}
+
+bg.onclick=function(){
+
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+
+}
+
+const egg=document.getElementById("egg");
+
+egg.addEventListener("dragstart",function(){
+
+    egg.src="wimages/egg_open.png";
+
+});
+
+egg.addEventListener("dragend",function(){
+
+    egg.src="wimages/egg_close.png";
+
+});
+
+</script>
+
+</body>
+
+</html>

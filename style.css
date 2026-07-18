@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*=========================
+リセット
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#000;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+/*=========================
+ヘッダー
+=========================*/
+
+header{
+    width:90%;
+    margin:25px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    background:#FFC995;
+    padding:12px 30px;
+    border-radius:40px;
+    font-size:26px;
+    font-weight:500;
+}
+
+.menu{
+    width:42px;
+}
+
+.menu span{
+    display:block;
+    height:3px;
+    background:#000;
+    margin:8px 0;
+    border-radius:3px;
+}
+
+/*=========================
+共通
+=========================*/
+
+section{
+    width:90%;
+    margin:80px auto;
+}
+
+/*=========================
+メイン画像
+=========================*/
+
+.hero{
+    margin-top:20px;
+}
+
+.hero img{
+    width:100%;
+    border-radius:28px;
+}
+
+
+/*=========================
+スライドショー
+=========================*/
+
+.slider{
+    width:90%;
+    margin:40px auto 80px;
+    overflow:hidden;
+    border-radius:22px;
+}
+
+.slide-track{
+    display:flex;
+    width:calc(340px * 16);
+    animation:slide 40s linear infinite;
+}
+
+.slide-track img{
+    width:320px;
+    height:220px;
+    object-fit:cover;
+    margin-right:20px;
+    border-radius:20px;
+    flex-shrink:0;
+}
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(calc(-340px * 8));
+    }
+}
+
+
+
+
+/*=========================
+キャッチコピー
+=========================*/
+
+.message{
+    text-align:center;
+}
+
+.message h2{
+    font-size:48px;
+    font-weight:500;
+    line-height:120px;
+}
+
+.message p{
+    font-size:24px;
+    font-weight:400;
+    line-height:60px;
+}
+
+/*=========================
+基本知識
+=========================*/
+
+.knowledge{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:35px;
+}
+
+.knowledge .item{
+    flex:1;
+}
+
+/* リンク全体をクリックできるようにする */
+.knowledge .item a{
+    display:block;
+    text-decoration:none;
+    color:#000;
+}
+
+/* タイトル＋アイコン */
+.knowledge h3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    font-size:30px;
+    font-weight:500;
+    line-height:69px;
+    margin-bottom:18px;
+}
+
+/* アイコンだけ小さくする */
+.knowledge .icon{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+/* 下の大きい画像 */
+.knowledge img:not(.icon){
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:22px;
+    transition:0.3s;
+}
+
+/* ホバー */
+.knowledge .item a:hover img:not(.icon){
+    transform:scale(1.03);
+}
+/*=========================
+レシピ
+=========================*/
+
+.recipe{
+    text-align:center;
+}
+
+.recipe h2{
+    font-size:55px;
+    font-weight:500;
+    line-height:99px;
+    margin-bottom:45px;
+}
+
+.category{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.category a{
+    flex:1;
+    text-decoration:none;
+    color:#000;
+    text-align:center;
+
+    font-size:40px;
+    font-weight:500;
+    line-height:72px;
+
+    padding:12px 0;
+    border-radius:40px;
+
+    transition:0.25s;
+}
+.washoku{
+    background:#D8E6FF;
+}
+
+.yoshoku{
+    background:#FFC5CD;
+}
+
+.chuka{
+    background:#FFD8A6;
+}
+
+.okashi{
+    background:#FFD9E7;
+}
+
+.category a:hover{
+    transform:scale(1.08);
+}
+
+.category a:active{
+    transform:scale(1.03);
+}
+
+
+/*=========================
+FAQ
+=========================*/
+
+.faq{
+    width:90%;
+    margin:120px auto;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:55px;
+    font-weight:500;
+    line-height:137.5px;
+    margin-bottom:80px;
+}
+
+/* 共通 */
+
+.question{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:80px;
+}
+
+.question .image{
+    flex:0 0 170px;
+    display:flex;
+    justify-content:center;
+}
+
+.question .image img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.question .text{
+    flex:1;
+}
+
+.question h3{
+    font-size:32px;
+    font-weight:500;
+    line-height:80px;
+    margin-bottom:8px;
+}
+
+.question p{
+    font-size:20px;
+    font-weight:400;
+    line-height:50px;
+}
+
+/* 左右配置 */
+
+.question.left{
+    flex-direction:row;
+}
+
+.question.right{
+    flex-direction:row-reverse;
+}
+
+.question.left .text{
+    text-align:left;
+}
+
+.question.right .text{
+    text-align:right;
+}
+
+/*=========================
+フッター
+=========================*/
+
+footer{
+    text-align:center;
+    margin:120px 0 60px;
+}
+
+footer p{
+    font-size:40px;
+    font-weight:500;
+    line-height:100px;
+}
+
+/*=========================
+スマホ対応
+=========================*/
+
+@media (max-width:768px){
+
+    header{
+        width:95%;
+    }
+
+    .logo{
+        font-size:20px;
+        padding:10px 20px;
+    }
+
+    section{
+        width:95%;
+        margin:60px auto;
+    }
+
+    .message h2{
+        font-size:34px;
+        line-height:60px;
+    }
+
+    .message p{
+        font-size:18px;
+        line-height:36px;
+    }
+
+    .knowledge{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .knowledge .item{
+        width:100%;
+    }
+
+    .recipe h2,
+    .faq h2{
+        font-size:38px;
+        line-height:70px;
+    }
+
+    .category{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .category a{
+        flex:0 0 48%;
+        font-size:28px;
+        line-height:60px;
+    }
+
+    .question,
+    .question.left,
+    .question.right{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .question .text{
+        text-align:center;
+    }
+
+    .question .image{
+        flex:0 0 auto;
+    }
+
+    .question .image img{
+        width:120px;
+        height:120px;
+    }
+
+    .question h3{
+        font-size:24px;
+        line-height:42px;
+    }
+
+    .question p{
+        font-size:16px;
+        line-height:30px;
+    }
+
+    footer p{
+        font-size:28px;
+        line-height:60px;
+    }
+
+}
+
+.slider{
+    width:95%;
+}
+
+.slide-track{
+    width:calc(265px * 16);
+}
+
+.slide-track img{
+    width:250px;
+    height:170px;
+    margin-right:15px;
+}
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(calc(-265px * 8));
+    }
+}

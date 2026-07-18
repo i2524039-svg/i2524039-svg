@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*==========================
+リセット
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#000;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/*==========================
+ヘッダー
+==========================*/
+
+header{
+    width:90%;
+    margin:25px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:500;
+}
+
+.menu{
+    width:42px;
+}
+
+.menu span{
+    display:block;
+    height:4px;
+    background:#000;
+    margin:8px 0;
+    border-radius:10px;
+}
+
+/*==========================
+サイドメニュー
+==========================*/
+
+#menu-bg{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:998;
+}
+
+#menu-bg.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:320px;
+    height:100%;
+    background:#FFFDF5;
+    box-shadow:-5px 0 15px rgba(0,0,0,.15);
+    padding:35px 25px;
+    transition:.3s;
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+}
+
+#side-menu.show{
+    right:0;
+}
+
+#close{
+    border:none;
+    background:none;
+    font-size:42px;
+    cursor:pointer;
+    align-self:flex-end;
+}
+
+#side-menu ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+#side-menu li{
+    margin-bottom:18px;
+}
+
+#side-menu a{
+    text-decoration:none;
+    color:#000;
+    font-size:22px;
+    transition:0.25s;
+}
+
+#side-menu a:hover{
+    color:#F39A3D;
+}
+
+.top-box{
+    margin-top:auto;
+    text-align:center;
+}
+
+.top-link{
+    text-decoration:none;
+    color:#000;
+    font-size:28px;
+    font-weight:500;
+}
+
+/*==========================
+メイン画像
+==========================*/
+
+.hero{
+    width:90%;
+    max-width:900px;
+    margin:25px auto 40px;
+}
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:28px;
+}
+
+.tape{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%) rotate(-6deg);
+    width:220px;
+    height:44px;
+    opacity:.65;
+}
+
+.level{
+    text-align:center;
+    margin-top:18px;
+    font-size:22px;
+}
+
+/*==========================
+３つのカード
+==========================*/
+
+.info{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:flex;
+    gap:24px;
+}
+
+.box{
+    flex:1;
+    background:#DDEAF5;
+    border-radius:18px;
+    padding:22px;
+    position:relative;
+}
+
+.box::before,
+.box::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#9ED0FF;
+    border-radius:50%;
+    top:10px;
+}
+
+.box::before{
+    left:10px;
+}
+
+.box::after{
+    right:10px;
+}
+
+.box .dot1,
+.box .dot2{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#9ED0FF;
+    border-radius:50%;
+}
+
+.box .dot1{
+    left:10px;
+    bottom:10px;
+}
+
+.box .dot2{
+    right:10px;
+    bottom:10px;
+}
+
+.box h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.box hr{
+    border:none;
+    border-top:2px solid #bfd7ee;
+    margin-bottom:16px;
+}
+
+.box ul{
+    list-style:none;
+}
+
+.box li{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:20px;
+    line-height:2;
+}
+
+.icon{
+    width:20px;
+    height:20px;
+    margin-right:8px;
+    vertical-align:middle;
+}
+
+/*==========================
+作り方
+==========================*/
+
+.recipe{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto 80px;
+    display:flex;
+    gap:40px;
+}
+
+.left{
+    flex:2;
+}
+
+.left h2{
+    font-size:52px;
+    margin-bottom:16px;
+}
+
+.left hr{
+    border:none;
+    border-top:2px solid #D8CDA6;
+    margin-bottom:35px;
+}
+
+.step{
+    margin-bottom:45px;
+}
+
+.step p{
+    font-size:20px;
+    line-height:2;
+    margin-bottom:18px;
+}
+
+.step img{
+    width:300px;
+    border-radius:15px;
+}
+
+
+/*==========================
+作り方
+==========================*/
+
+.recipe{
+    width:90%;
+    margin:0 auto 80px;
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:2;
+}
+
+.left h2{
+    font-size:48px;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.left hr{
+    border:none;
+    border-top:2px solid #D9CCAA;
+    margin-bottom:35px;
+}
+
+.step{
+    margin-bottom:45px;
+}
+
+.step p{
+    font-size:20px;
+    line-height:2;
+    margin-bottom:18px;
+}
+
+.step img{
+    width:300px;
+    border-radius:14px;
+    margin-left:20px;
+}
+
+/*==========================
+右側カード
+==========================*/
+
+.right{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.tips,
+.trouble{
+    border-radius:18px;
+    padding:28px;
+    position:relative;
+}
+
+.tips{
+    background:#DDF8D0;
+}
+
+.trouble{
+    background:#FFE3EC;
+}
+
+.tips::before,
+.tips::after,
+.trouble::before,
+.trouble::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    top:12px;
+}
+
+.tips::before,
+.tips::after{
+    background:#8FD97A;
+}
+
+.trouble::before,
+.trouble::after{
+    background:#F5A7C8;
+}
+
+.tips::before,
+.trouble::before{
+    left:12px;
+}
+
+.tips::after,
+.trouble::after{
+    right:12px;
+}
+
+.tips h3,
+.trouble h3{
+    text-align:center;
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:16px;
+}
+
+.tips hr,
+.trouble hr{
+    border:none;
+    border-top:2px solid rgba(0,0,0,.15);
+    margin:14px 0;
+}
+
+.tips p,
+.trouble p{
+    font-size:18px;
+    line-height:2;
+}
+
+/*==========================
+スマホ対応
+==========================*/
+
+@media(max-width:768px){
+
+    header{
+        width:95%;
+    }
+
+    .logo{
+        font-size:34px;
+    }
+
+    .hero,
+    .info,
+    .recipe{
+        width:95%;
+    }
+
+    .hero-image img{
+        width:100%;
+    }
+
+    .tape{
+        width:120px;
+        height:26px;
+    }
+
+    .level{
+        font-size:22px;
+    }
+
+    .info{
+        flex-direction:column;
+    }
+
+    .recipe{
+        flex-direction:column;
+    }
+
+    .step img{
+        width:100%;
+        margin-left:0;
+    }
+
+    .box h2,
+    .left h2,
+    .tips h3,
+    .trouble h3{
+        font-size:26px;
+    }
+
+    .box li,
+    .step p,
+    .tips p,
+    .trouble p{
+        font-size:17px;
+    }
+
+    #side-menu{
+        width:270px;
+    }
+
+}

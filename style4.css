@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*=========================
+リセット
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#000;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/*=========================
+ヘッダー
+=========================*/
+
+header{
+    width:90%;
+    margin:25px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    background:#C8F7B8;
+    padding:12px 32px;
+    border-radius:40px;
+    font-size:26px;
+    font-weight:500;
+}
+
+.menu{
+    width:42px;
+}
+
+.menu span{
+    display:block;
+    height:3px;
+    background:#000;
+    margin:8px 0;
+    border-radius:3px;
+}
+
+/*=========================
+共通
+=========================*/
+
+section{
+    width:90%;
+    margin:60px auto;
+}
+
+/*=========================
+上段
+=========================*/
+
+.top-box{
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+}
+
+.card{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    background:#FFFEF4;
+    border:2px solid #E8DDC8;
+    border-radius:18px;
+    padding:30px;
+}
+
+.card h2{
+    text-align:center;
+    font-size:32px;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.card hr{
+    border:none;
+    border-top:2px solid #E8DDC8;
+    margin:0 0 22px;
+}
+
+.card h3{
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.card:first-child img{
+    display:block;
+    width:75%;
+    max-width:430px;
+    margin:10px auto 25px;
+}
+
+.hold-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px 0;
+}
+
+.hold-img img{
+    width:72%;
+    max-width:420px;
+    border-radius:4px;
+}
+
+.card p{
+    font-size:18px;
+    line-height:2;
+    text-align:center;
+    margin-top:20px;
+}
+
+.card ul{
+    margin-top:10px;
+    margin-left:25px;
+}
+
+.card li{
+    font-size:18px;
+    line-height:2;
+}
+
+/*=========================
+基本の切り方
+=========================*/
+
+.cut{
+    background:#FFFEF4;
+    border:2px solid #E8DDC8;
+    border-radius:18px;
+    padding:35px;
+}
+
+.cut h2{
+    text-align:center;
+    font-size:36px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.cut hr{
+    border:none;
+    border-top:2px solid #E8DDC8;
+    margin-bottom:30px;
+}
+
+.cut-list{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+}
+
+.cut-card{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    padding:0 18px;
+}
+
+.cut-card:not(:last-child){
+    border-right:2px solid #E8DDC8;
+}
+
+.cut-card h3{
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.cut-card p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+.cut-card img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    margin:18px auto;
+    border-radius:4px;
+}
+
+.cut-card h4{
+    font-size:18px;
+    font-weight:500;
+    margin:15px 0 10px;
+}
+
+/*=========================
+猫の手
+=========================*/
+
+.cat{
+    background:#FFFEF4;
+    border:2px solid #E8DDC8;
+    border-radius:18px;
+    padding:35px;
+}
+
+.cat h2{
+    text-align:center;
+    font-size:36px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.cat hr{
+    border:none;
+    border-top:2px solid #E8DDC8;
+    margin:25px 0;
+}
+
+.cat-box{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.cat-box img{
+    width:42%;
+    max-width:380px;
+    border-radius:6px;
+}
+
+.point{
+    flex:1;
+}
+
+.point h3{
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.point p{
+    font-size:18px;
+    line-height:2;
+}
+
+.cat > p{
+    text-align:center;
+    font-size:18px;
+    line-height:2;
+    margin-bottom:30px;
+}
+
+/*=========================
+トップへ戻る
+=========================*/
+
+.back{
+    text-align:center;
+    margin:60px auto;
+}
+
+.back a{
+    display:inline-block;
+    padding:14px 36px;
+    background:#C8F7B8;
+    color:#000;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.back a:hover{
+    transform:scale(1.05);
+}
+
+/*=========================
+フッター
+=========================*/
+
+footer{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+
+footer p{
+    font-size:20px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+footer a{
+    color:#000;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/*=========================
+スマホ対応
+=========================*/
+
+@media (max-width:768px){
+
+    header{
+        width:95%;
+    }
+
+    .logo{
+        font-size:20px;
+        padding:10px 20px;
+    }
+
+    section{
+        width:95%;
+        margin:40px auto;
+    }
+
+    .top-box{
+        flex-direction:column;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .card h2,
+    .cut h2,
+    .cat h2{
+        font-size:28px;
+    }
+
+    .card h3,
+    .cut-card h3,
+    .point h3{
+        font-size:22px;
+    }
+
+    .card:first-child img,
+    .hold-img img{
+        width:85%;
+        max-width:320px;
+    }
+
+    .cut-list{
+        flex-direction:column;
+    }
+
+    .cut-card{
+        border-right:none !important;
+        border-bottom:2px solid #E8DDC8;
+        padding:25px 0;
+    }
+
+    .cut-card:last-child{
+        border-bottom:none;
+    }
+
+    .cut-card img{
+        width:120px;
+        height:120px;
+    }
+
+    .cat-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cat-box img{
+        width:80%;
+        max-width:280px;
+    }
+
+    .point{
+        text-align:center;
+    }
+
+    .card p,
+    .card li,
+    .cut-card p,
+    .point p,
+    .cat > p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .back a,
+    footer a{
+        font-size:18px;
+    }
+
+    footer p{
+        font-size:16px;
+    }
+}

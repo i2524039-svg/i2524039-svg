@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>洋食レシピ一覧</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<!--==========================
+ハンバーガーメニュー
+===========================-->
+
+<div id="menu-bg"></div>
+
+<nav id="side-menu">
+
+    <button id="close">×</button>
+
+    <ul>
+        <li><a href="buttertoast.html">バタートースト</a></li>
+        <li><a href="hamcheese.html">ハムチーズサンド</a></li>
+        <li><a href="scramble.html">スクランブルエッグ</a></li>
+        <li><a href="cornsoup.html">コーンスープ</a></li>
+        <li><a href="frenchtoast.html">フレンチトースト</a></li>
+        <li><a href="omurice.html">オムライス</a></li>
+    </ul>
+
+    <div class="top-box">
+        <a href="index.html" class="top-link">TOPへ戻る</a>
+    </div>
+
+</nav>
+
+<!--==========================
+ヘッダー
+===========================-->
+
+<header>
+
+    <a href="index.html" class="back-btn">
+        洋食レシピ一覧
+    </a>
+
+    <div class="menu" id="open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</header>
+
+<!--==========================
+一覧
+===========================-->
+
+<main class="grid">
+
+    <a href="buttertoast.html" class="recipe-card">
+
+        <div class="tape" style="background:#8BE66E;"></div>
+
+        <img src="images/buttertoast.png" alt="バタートースト">
+
+        <h2>バタートースト</h2>
+
+        <p>★☆☆</p>
+
+    </a>
+
+    <a href="hamcheese.html" class="recipe-card">
+
+        <div class="tape" style="background:#84E8EF;"></div>
+
+        <img src="images/hamcheese.png" alt="ハムチーズサンド">
+
+        <h2>ハムチーズサンド</h2>
+
+        <p>★☆☆</p>
+
+    </a>
+
+    <a href="scramble.html" class="recipe-card">
+
+        <div class="tape" style="background:#AAA9F8;"></div>
+
+        <img src="images/scramble.png" alt="スクランブルエッグ">
+
+        <h2>スクランブルエッグ</h2>
+
+        <p>★★☆</p>
+
+    </a>
+
+    <a href="cornsoup.html" class="recipe-card">
+
+        <div class="tape" style="background:#A6F4B7;"></div>
+
+        <img src="images/cornsoup.png" alt="コーンスープ">
+
+        <h2>コーンスープ</h2>
+
+        <p>★★☆</p>
+
+    </a>
+
+    <a href="frenchtoast.html" class="recipe-card">
+
+        <div class="tape" style="background:#FF9F9F;"></div>
+
+        <img src="images/frenchtoast.png" alt="フレンチトースト">
+
+        <h2>フレンチトースト</h2>
+
+        <p>★★★</p>
+
+    </a>
+
+    <a href="omurice.html" class="recipe-card">
+
+        <div class="tape" style="background:#FFC38B;"></div>
+
+        <img src="images/omurice.png" alt="オムライス">
+
+        <h2>オムライス</h2>
+
+        <p>★★★</p>
+
+    </a>
+
+</main>
+
+<script>
+
+const open=document.getElementById("open");
+const close=document.getElementById("close");
+const menu=document.getElementById("side-menu");
+const bg=document.getElementById("menu-bg");
+
+open.onclick=()=>{
+    menu.classList.add("show");
+    bg.classList.add("show");
+}
+
+close.onclick=()=>{
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+bg.onclick=()=>{
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+</script>
+
+</body>
+</html>

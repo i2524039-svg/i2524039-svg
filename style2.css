@@ -1,0 +1,135 @@
+/*=========================
+必要な道具ページ
+=========================*/
+
+.tools{
+    width:90%;
+    margin:50px auto;
+    background:#FBE8E8;
+    border:2px solid #E6D0D0;
+    border-radius:10px;
+    padding:20px;
+}
+
+.tools h2{
+    text-align:center;
+    font-size:48px;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.tool-row{
+    display:flex;
+    border-top:2px solid #E6D0D0;
+}
+
+.tool-row:first-of-type{
+    border-top:none;
+}
+
+.tool-card{
+    flex:1;
+    padding:30px 25px;
+}
+
+.tool-card:not(:last-child){
+    border-right:2px solid #E6D0D0;
+}
+
+.tool-card h3{
+    text-align:center;
+    font-size:32px;
+    font-weight:500;
+    margin-bottom:25px;
+    line-height:50px;
+}
+
+/* ←ここを書き換える */
+.tool-card img{
+    display:block;
+    width:80%;
+    max-width:240px;
+    height:170px;
+    object-fit:cover;
+    margin:0 auto 25px;
+    border-radius:4px;
+}
+
+.tool-card p{
+    font-size:22px;
+    line-height:42px;
+}
+
+/*=========================
+フッター
+=========================*/
+
+footer{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+
+footer p{
+    font-size:22px;
+    line-height:42px;
+    margin-bottom:30px;
+}
+
+footer a{
+    text-decoration:none;
+    color:#000;
+    font-size:22px;
+    font-weight:500;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/*=========================
+スマホ
+=========================*/
+
+@media(max-width:768px){
+
+.tools{
+    width:95%;
+}
+
+.tools h2{
+    font-size:34px;
+}
+
+.tool-row{
+    flex-direction:column;
+}
+
+.tool-card{
+    border-right:none !important;
+    border-bottom:2px solid #E6D0D0;
+}
+
+.tool-card:last-child{
+    border-bottom:none;
+}
+
+.tool-card h3{
+    font-size:28px;
+}
+
+.tool-card img{
+    height:auto;
+}
+
+.tool-card p{
+    font-size:18px;
+    line-height:34px;
+}
+
+footer p{
+    font-size:18px;
+    line-height:34px;
+}
+
+}

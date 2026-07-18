@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>冷ややっこ</title>
+    <link rel="stylesheet" href="tamagokake.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1 class="logo">冷ややっこ</h1>
+
+    <div class="menu" id="open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</header>
+
+<div id="menu-bg"></div>
+
+<nav id="side-menu">
+
+    <button id="close">×</button>
+
+    <ul>
+        <li><a href="tamagokake.html">卵かけご飯</a></li>
+        <li><a href="hiyayakko.html">冷ややっこ</a></li>
+        <li><a href="medamayaki.html">目玉焼き</a></li>
+        <li><a href="misosiru.html">わかめの味噌汁</a></li>
+        <li><a href="teriyaki.html">鶏むね肉の照り焼き</a></li>
+        <li><a href="oyakodon.html">親子丼</a></li>
+    </ul>
+
+    <div class="top-box">
+        <a href="index.html" class="top-link">TOPへ戻る</a>
+    </div>
+
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-image">
+
+        <div class="tape" style="background:#FF9E9E;"></div>
+
+        <img src="images/hiya.png" alt="冷ややっこ">
+
+    </div>
+
+    <p class="level">
+        難易度１　★☆☆
+    </p>
+
+</section>
+
+<section class="info">
+
+    <div class="box">
+
+        <h2>材料（一人分）</h2>
+
+        <hr>
+
+        <ul>
+            <li><span>・豆腐</span><span>１丁</span></li>
+            <li><span>・しょうゆ</span><span>適量</span></li>
+            <li><span>・薬味</span><span>適量</span></li>
+        </ul>
+
+    </div>
+
+    <div class="box">
+
+        <h2>必要な道具</h2>
+
+        <hr>
+
+        <ul>
+            <li>・お皿</li>
+            <li>・小皿</li>
+            <li>・箸</li>
+        </ul>
+
+    </div>
+
+    <div class="box point">
+
+        <h2>注目ポイント</h2>
+
+        <hr>
+
+        <ul>
+ <li><img src="wimages/kinsihi.png" class="icon" alt=""> 火を使わない</li>
+<li><img src="images/houhe.png" class="icon" alt=""> 包丁を使わない</li>
+<li><img src="images/otahe.png" class="icon" alt=""> ５分以内に完成</li>
+        
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="recipe">
+
+    <div class="left">
+
+        <h2>作り方</h2>
+
+        <hr>
+
+        <div class="step">
+
+            <p>
+                ① 豆腐のパックをゆっくり開けます。
+                パックの中には水が入っているので、
+                こぼさないように気を付けましょう。
+            </p>
+
+            <img src="wimages/w1.png" alt="手順1">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ② パックの端から水をシンクへゆっくり流します。
+                豆腐を落とさないように気を付けましょう。
+            </p>
+
+            <img src="wimages/w2.png" alt="手順2">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ③ パックを逆さにして、お皿の上にそっと出します。
+                出にくいときは底を軽く押すと出しやすくなります。
+            </p>
+
+            <img src="wimages/w3.png" alt="手順3">
+
+        </div>
+
+        <div class="step">
+
+            <p>
+                ④ しょうゆをかけます。
+                お好みでねぎ・しょうが・かつお節などをのせたら完成です。
+            </p>
+
+            <img src="wimages/w4.png" alt="手順4">
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="tips">
+
+            <h3>豆腐の扱い方</h3>
+
+            <hr>
+
+            <p>
+
+                パックから勢いよく出すのはやめましょう。<br><br>
+
+                豆腐はとてもやわらかいので、高いところから落とすと崩れてしまいます。<br><br>
+
+                お皿をパックのすぐ下に置いて、そっと出しましょう。
+
+            </p>
+
+        </div>
+
+        <div class="trouble">
+
+            <h3>もっと美味しい</h3>
+
+            <hr>
+
+            <p>
+
+                時間があれば、豆腐をお皿に出して5〜10分ほど置くと水切りができます。<br><br>
+
+                水分が減ることで、しょうゆや薬味の風味がより引き立ちます。
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<script>
+
+const open=document.getElementById("open");
+const close=document.getElementById("close");
+const menu=document.getElementById("side-menu");
+const bg=document.getElementById("menu-bg");
+
+open.onclick=function(){
+    menu.classList.add("show");
+    bg.classList.add("show");
+}
+
+close.onclick=function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+bg.onclick=function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+</script>
+
+</body>
+</html>
