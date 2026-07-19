@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
 
-/*=========================
+/*==========================
 リセット
-=========================*/
+==========================*/
 
 *{
     margin:0;
@@ -18,163 +18,220 @@ body{
 
 img{
     display:block;
-    max-width:100%;
+    width:100%;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/*=========================
+/*==========================
 ヘッダー
-=========================*/
+==========================*/
 
 header{
     width:90%;
-    margin:25px auto;
+    margin:30px auto 40px;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-start;
 }
 
-.logo{
-    background:#FFC5CD;
-    padding:12px 30px;
-    border-radius:40px;
-    font-size:26px;
+.category{
+    background:#FFD9B3;
+    padding:18px 30px;
+    border-radius:30px;
+    font-size:34px;
     font-weight:500;
 }
 
 .menu{
-    width:42px;
+    width:45px;
+    cursor:pointer;
 }
 
 .menu span{
     display:block;
-    height:3px;
+    height:4px;
     background:#000;
     margin:8px 0;
-    border-radius:3px;
+    border-radius:10px;
 }
 
-/*=========================
-レシピ一覧
-=========================*/
+/*==========================
+ハンバーガーメニュー
+==========================*/
+
+#menu-bg{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:998;
+}
+
+#menu-bg.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:320px;
+    height:100%;
+    background:#FFFDF5;
+    padding:35px 25px;
+    box-shadow:-5px 0 15px rgba(0,0,0,.15);
+    transition:.3s;
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+}
+
+#side-menu.show{
+    right:0;
+}
+
+#close{
+    border:none;
+    background:none;
+    font-size:42px;
+    cursor:pointer;
+    align-self:flex-end;
+}
+
+#side-menu ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+#side-menu li{
+    margin-bottom:18px;
+}
+
+#side-menu a{
+    text-decoration:none;
+    color:#000;
+    font-size:22px;
+}
+
+.top-box{
+    margin-top:auto;
+    text-align:center;
+}
+
+.top-link{
+    text-decoration:none;
+    color:#000;
+    font-size:28px;
+}
+
+/*==========================
+一覧
+==========================*/
 
 .recipe-list{
     width:90%;
-    margin:70px auto;
+    max-width:1200px;
+    margin:0 auto 80px;
+
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:70px 60px;
+    gap:70px 80px;
 }
 
-.recipe-card{
+.card{
+    text-decoration:none;
+    color:#000;
+}
+
+.photo{
     position:relative;
-    transition:.25s;
 }
 
-.recipe-card:hover{
-    transform:scale(1.05);
+.photo img{
+    border-radius:8px;
 }
 
-.recipe-card img{
-    width:100%;
-    height:320px;          /* ← 高さを高く */
-    object-fit:cover;
-    border-radius:15px;
-    display:block;
-    transition:0.3s;
+.tape{
+    position:absolute;
+    width:160px;
+    height:40px;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%) rotate(-3deg);
+    opacity:.6;
 }
 
-.recipe-card h2{
+.purple{
+    background:#8E8CFF;
+}
+
+.pink{
+    background:#FF8D8D;
+}
+
+.green{
+    background:#A8F3C0;
+}
+
+.orange{
+    background:#FFB07A;
+}
+
+.blue{
+    background:#6EE6F0;
+}
+
+.lime{
+    background:#9EF46A;
+}
+
+.card h2{
     margin-top:18px;
-    font-size:24px;
+    font-size:28px;
     font-weight:500;
 }
 
 .level{
     margin-top:10px;
-    font-size:28px;
-    color:#FFD700;
-    letter-spacing:2px;
+    font-size:30px;
+    color:#F5D400;
+    letter-spacing:3px;
 }
 
-.level span{
-    color:#B5B5B5;
-}
-
-/*=========================
-付箋
-=========================*/
-
-.memo{
-    position:absolute;
-    width:120px;
-    height:34px;
-    opacity:.75;
-    transform:rotate(-5deg);
-    top:-14px;
-    left:90px;
-}
-
-/* 色違い */
-
-.blue{
-    background:#82E5FF;
-}
-
-.pink{
-    background:#FF9DAA;
-}
-
-.orange{
-    background:#FFBF80;
-}
-
-.green{
-    background:#A8F57A;
-}
-
-.purple{
-    background:#B9B5FF;
-}
-
-/*=========================
-スマホ対応
-=========================*/
+/*==========================
+スマホ
+==========================*/
 
 @media(max-width:768px){
 
-header{
-    width:95%;
-}
+    header{
+        width:95%;
+    }
 
-.logo{
-    font-size:20px;
-    padding:10px 20px;
-}
+    .category{
+        font-size:26px;
+        padding:14px 22px;
+    }
 
-.recipe-list{
-    width:95%;
-    grid-template-columns:1fr;
-    gap:50px;
-}
+    .recipe-list{
+        width:95%;
+        grid-template-columns:1fr;
+        gap:45px;
+    }
 
-.recipe-card h2{
-    font-size:22px;
-}
+    .card h2{
+        font-size:24px;
+    }
 
-.level{
-    font-size:24px;
-}
+    .level{
+        font-size:24px;
+    }
 
-.memo{
-    width:95px;
-    height:28px;
-    left:50%;
-    transform:translateX(-50%) rotate(-5deg);
-}
+    #side-menu{
+        width:260px;
+    }
 
 }
