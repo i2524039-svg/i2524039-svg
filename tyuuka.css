@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*==========================
+リセット
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#000;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+/*==========================
+ヘッダー
+==========================*/
+
+header{
+    width:90%;
+    margin:30px auto 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.category{
+    background:#FFD9B3;
+    padding:18px 30px;
+    border-radius:30px;
+    font-size:34px;
+    font-weight:500;
+}
+
+.menu{
+    width:45px;
+    cursor:pointer;
+}
+
+.menu span{
+    display:block;
+    height:4px;
+    background:#000;
+    margin:8px 0;
+    border-radius:10px;
+}
+
+/*==========================
+ハンバーガーメニュー
+==========================*/
+
+#menu-bg{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:998;
+}
+
+#menu-bg.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:320px;
+    height:100%;
+    background:#FFFDF5;
+    padding:35px 25px;
+    box-shadow:-5px 0 15px rgba(0,0,0,.15);
+    transition:.3s;
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+}
+
+#side-menu.show{
+    right:0;
+}
+
+#close{
+    border:none;
+    background:none;
+    font-size:42px;
+    cursor:pointer;
+    align-self:flex-end;
+}
+
+#side-menu ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+#side-menu li{
+    margin-bottom:18px;
+}
+
+#side-menu a{
+    text-decoration:none;
+    color:#000;
+    font-size:22px;
+}
+
+.top-box{
+    margin-top:auto;
+    text-align:center;
+}
+
+.top-link{
+    text-decoration:none;
+    color:#000;
+    font-size:28px;
+}
+
+/*==========================
+一覧
+==========================*/
+
+.recipe-list{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto 80px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px 80px;
+}
+
+.card{
+    text-decoration:none;
+    color:#000;
+}
+
+.photo{
+    position:relative;
+}
+
+.photo img{
+    border-radius:8px;
+}
+
+.tape{
+    position:absolute;
+    width:160px;
+    height:40px;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%) rotate(-3deg);
+    opacity:.6;
+}
+
+.purple{
+    background:#8E8CFF;
+}
+
+.pink{
+    background:#FF8D8D;
+}
+
+.green{
+    background:#A8F3C0;
+}
+
+.orange{
+    background:#FFB07A;
+}
+
+.blue{
+    background:#6EE6F0;
+}
+
+.lime{
+    background:#9EF46A;
+}
+
+.card h2{
+    margin-top:18px;
+    font-size:28px;
+    font-weight:500;
+}
+
+.level{
+    margin-top:10px;
+    font-size:30px;
+    color:#F5D400;
+    letter-spacing:3px;
+}
+
+/*==========================
+スマホ
+==========================*/
+
+@media(max-width:768px){
+
+    header{
+        width:95%;
+    }
+
+    .category{
+        font-size:26px;
+        padding:14px 22px;
+    }
+
+    .recipe-list{
+        width:95%;
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .card h2{
+        font-size:24px;
+    }
+
+    .level{
+        font-size:24px;
+    }
+
+    #side-menu{
+        width:260px;
+    }
+
+}
