@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
 
-/*==========================
-リセット
-==========================*/
-
 *{
     margin:0;
     padding:0;
@@ -19,30 +15,36 @@ body{
 img{
     display:block;
     width:100%;
+    border-radius:12px;
 }
 
-/*==========================
+a{
+    text-decoration:none;
+    color:#000;
+}
+
+/*------------------------
 ヘッダー
-==========================*/
+------------------------*/
 
 header{
     width:90%;
-    margin:30px auto 40px;
+    margin:30px auto 50px;
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
+    align-items:center;
 }
 
 .category{
     background:#FFD9B3;
-    padding:18px 30px;
-    border-radius:30px;
-    font-size:34px;
+    padding:15px 30px;
+    border-radius:40px;
+    font-size:32px;
     font-weight:500;
 }
 
 .menu{
-    width:45px;
+    width:42px;
     cursor:pointer;
 }
 
@@ -54,14 +56,45 @@ header{
     border-radius:10px;
 }
 
-/*==========================
-ハンバーガーメニュー
-==========================*/
+/*------------------------
+一覧
+------------------------*/
+
+.recipe-list{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto 80px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px;
+}
+
+.card{
+    display:block;
+}
+
+.card h2{
+    font-size:32px;
+    font-weight:500;
+    margin-top:18px;
+}
+
+.level{
+    margin-top:10px;
+    font-size:28px;
+    color:#FFD700;
+    letter-spacing:3px;
+}
+
+/*------------------------
+サイドメニュー
+------------------------*/
 
 #menu-bg{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.3);
     opacity:0;
     visibility:hidden;
     transition:.3s;
@@ -80,8 +113,7 @@ header{
     width:320px;
     height:100%;
     background:#FFFDF5;
-    padding:35px 25px;
-    box-shadow:-5px 0 15px rgba(0,0,0,.15);
+    padding:30px;
     transition:.3s;
     z-index:999;
 
@@ -111,8 +143,6 @@ header{
 }
 
 #side-menu a{
-    text-decoration:none;
-    color:#000;
     font-size:22px;
 }
 
@@ -122,88 +152,12 @@ header{
 }
 
 .top-link{
-    text-decoration:none;
-    color:#000;
-    font-size:28px;
+    font-size:26px;
 }
 
-/*==========================
-一覧
-==========================*/
-
-.recipe-list{
-    width:90%;
-    max-width:1200px;
-    margin:0 auto 80px;
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:70px 80px;
-}
-
-.card{
-    text-decoration:none;
-    color:#000;
-}
-
-.photo{
-    position:relative;
-}
-
-.photo img{
-    border-radius:8px;
-}
-
-.tape{
-    position:absolute;
-    width:160px;
-    height:40px;
-    top:-15px;
-    left:50%;
-    transform:translateX(-50%) rotate(-3deg);
-    opacity:.6;
-}
-
-.purple{
-    background:#8E8CFF;
-}
-
-.pink{
-    background:#FF8D8D;
-}
-
-.green{
-    background:#A8F3C0;
-}
-
-.orange{
-    background:#FFB07A;
-}
-
-.blue{
-    background:#6EE6F0;
-}
-
-.lime{
-    background:#9EF46A;
-}
-
-.card h2{
-    margin-top:18px;
-    font-size:28px;
-    font-weight:500;
-}
-
-.level{
-    margin-top:10px;
-    font-size:30px;
-    color:#F5D400;
-    letter-spacing:3px;
-}
-
-/*==========================
+/*------------------------
 スマホ
-==========================*/
+------------------------*/
 
 @media(max-width:768px){
 
@@ -212,22 +166,22 @@ header{
     }
 
     .category{
-        font-size:26px;
-        padding:14px 22px;
+        font-size:24px;
+        padding:12px 24px;
     }
 
     .recipe-list{
         width:95%;
         grid-template-columns:1fr;
-        gap:45px;
+        gap:40px;
     }
 
     .card h2{
-        font-size:24px;
+        font-size:26px;
     }
 
     .level{
-        font-size:24px;
+        font-size:22px;
     }
 
     #side-menu{
