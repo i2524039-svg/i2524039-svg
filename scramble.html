@@ -14,10 +14,6 @@
 
 <body>
 
-<!--==========================
-ハンバーガーメニュー
-===========================-->
-
 <div id="menu-bg"></div>
 
 <nav id="side-menu">
@@ -36,36 +32,24 @@
     </ul>
 
     <div class="top-box">
-
         <a href="index.html" class="top-link">TOPへ戻る</a>
-
     </div>
 
 </nav>
 
-<!--==========================
-ヘッダー
-===========================-->
-
 <header>
 
-    <h1>スクランブルエッグ</h1>
+    <h1 class="logo">スクランブルエッグ</h1>
 
     <div class="menu" id="open">
-
         <span></span>
         <span></span>
         <span></span>
-
     </div>
 
 </header>
 
 <main>
-
-<!--==========================
-メイン画像
-===========================-->
 
 <section class="hero">
 
@@ -78,16 +62,10 @@
     </div>
 
     <div class="level">
-
-        難易度2　★★<span>☆</span>
-
+        難易度２　★★☆
     </div>
 
 </section>
-
-<!--==========================
-材料など
-===========================-->
 
 <section class="info">
 
@@ -140,137 +118,119 @@
 
 </section>
 
-<!--==========================
-作り方
-===========================-->
-
 <section class="recipe">
 
-    <div class="left">
+<div class="left">
 
-        <h2>作り方</h2>
+<h2>作り方</h2>
 
-        <hr>
+<hr>
 
-        <div class="step">
+<div class="step">
+
+<p>
+① ボウルに卵を割り入れます。牛乳があればここで入れます。
+塩を入れても良いでしょう。白身が見えなくなるまでよく混ぜます。
+</p>
+
+<img src="skr/s1.png" alt="手順1">
+
+</div>
+
+<div class="step">
+
+<p>
+② フライパンを弱めの中火にかけ、バターを入れます。
+バターが溶けて全体に広がったらOKです。
+</p>
+
+<img src="skr/s2.png" alt="手順2">
+
+</div>
+
+<div class="step">
+
+<p>
+③ 溶いた卵をフライパンに流し入れます。
+卵の周りが固まり始めるまで数秒待ちます。
+</p>
+
+<img src="skr/s3.png" alt="手順3">
+
+</div>
+
+    <div class="right">
+
+        <div class="tips">
+
+            <h3>調理のコツ</h3>
+
+            <hr>
 
             <p>
-                ① ボウルに卵を割り入れます。牛乳があればここで入れます。
-                塩を入れても良いでしょう。白身が見えなくなるまでよく混ぜます。
-            </p>
 
-            <img src="skr/s1.png" alt="手順1">
+                強火で一気に焼くと卵がパサつきやすくなります。<br><br>
+
+                弱めの中火でゆっくり火を通すと、
+                柔らかくふんわりした食感になります。
+
+            </p>
 
         </div>
 
-        <div class="step">
+        <div class="trouble">
+
+            <h3>牛乳を入れると</h3>
+
+            <hr>
 
             <p>
-                ② フライパンを弱めの中火にかけ、バターを入れます。
-                バターが溶けて全体に広がったらOKです。
+
+                牛乳を少量入れると、
+                卵が柔らかくなりふんわり仕上がりやすくなります。<br><br>
+
+                入れ過ぎると水っぽくなるので、
+                大さじ1程度で十分です。<br><br>
+
+                アレルギーのある人は、
+                水や豆乳、アーモンドミルク、
+                オーツミルクなどでも代用できます。
+
             </p>
-
-            <img src="skr/s2.png" alt="手順2">
-
-        </div>
-
-        <div class="step">
-
-            <p>
-                ③ 溶いた卵をフライパンに流し入れます。
-                卵の周りが固まり始めるまで数秒待ちます。
-            </p>
-
-            <img src="skr/s3.png" alt="手順3">
-
-        </div>
-
-                <div class="step">
-
-            <p>
-                ④ 菜箸やフライ返しで、外側から大きく混ぜます。
-                固まってきた部分を中央に寄せながら、ゆっくり混ぜます。
-            </p>
-
-            <img src="skr/s4.png" alt="手順4">
-
-        </div>
-
-        <div class="step">
-
-            <p>
-                ⑤ 卵がまだトロッとしている状態で火を止めます。
-                予熱でちょうど良く固まります。
-            </p>
-
-            <img src="skr/s5.png" alt="手順5">
-
-        </div>
-
-        <div class="step">
-
-            <p>
-                ⑥ お皿に移し、お好みで塩こしょうを振ったら完成です。
-            </p>
-
-            <img src="skr/s6.png" alt="手順6">
 
         </div>
 
     </div>
 
-    <aside class="right">
-
-    <div class="tips">
-
-        <h3>調理のコツ</h3>
-
-        <hr>
-
-        <p>・・・</p>
-
-    </div>
-
-    <div class="trouble">
-
-        <h3>牛乳を入れると</h3>
-
-        <hr>
-
-        <p>・・・</p>
-
-    </div>
-
-</aside>
 </section>
 
 </main>
 
 <script>
 
-const open = document.getElementById("open");
-const close = document.getElementById("close");
-const sideMenu = document.getElementById("side-menu");
-const menuBg = document.getElementById("menu-bg");
+const open=document.getElementById("open");
+const close=document.getElementById("close");
+const menu=document.getElementById("side-menu");
+const bg=document.getElementById("menu-bg");
 
-open.onclick = function(){
+open.onclick=function(){
 
-    sideMenu.classList.add("show");
-    menuBg.classList.add("show");
-
-}
-
-close.onclick = function(){
-
-    sideMenu.classList.remove("show");
-    menuBg.classList.remove("show");
+    menu.classList.add("show");
+    bg.classList.add("show");
 
 }
 
-menuBg.onclick = function(){
+close.onclick=function(){
 
-    sideMenu.classList.remove("show");
-    menuBg.classList.remove("show");
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+
+}
+
+bg.onclick=function(){
+
+    menu.classList.remove("show");
+    bg.classList.remove("show");
 
 }
 
