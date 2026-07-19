@@ -14,44 +14,13 @@
 
 <body>
 
-<!--==========================
-ハンバーガーメニュー
-===========================-->
-
-<div id="menu-bg"></div>
-
-<nav id="side-menu">
-
-    <button id="close">×</button>
-
-    <ul>
-
-        <li><a href="namul.html">もやしナムル</a></li>
-        <li><a href="cucumber.html">きゅうりの中華和え</a></li>
-        <li><a href="kakitama.html">中華風かきたまスープ</a></li>
-        <li><a href="harusame.html">春雨サラダ</a></li>
-        <li><a href="yasaiitame.html">野菜炒め</a></li>
-        <li><a href="friedrice.html">チャーハン</a></li>
-
-    </ul>
-
-    <div class="top-box">
-
-        <a href="index.html" class="top-link">TOPへ戻る</a>
-
-    </div>
-
-</nav>
-
-<!--==========================
-ヘッダー
-===========================-->
-
 <header>
 
-    <h1 class="category">中華レシピー覧</h1>
+    <div class="logo">
+        中華レシピ一覧
+    </div>
 
-    <div class="menu" id="open">
+    <div class="menu">
 
         <span></span>
         <span></span>
@@ -61,139 +30,91 @@
 
 </header>
 
-<!--==========================
-一覧
-===========================-->
+<main>
 
-<main class="recipe-list">
+<section class="recipe-list">
 
-    <a href="namul.html" class="card">
+    <!-- 1 -->
+    <a href="moyashi.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape purple"></div>
-
-            <img src="namul/namul.png" alt="もやしナムル">
-
+        <div class="image-box">
+            <img src="chuuka/moyashi.png" alt="もやしナムル">
         </div>
 
         <h2>もやしナムル</h2>
 
-        <p class="level">★☆☆</p>
+        <div class="star">★☆☆</div>
 
     </a>
 
-    <a href="cucumber.html" class="card">
+    <!-- 2 -->
+    <a href="kyuuri.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape pink"></div>
-
-            <img src="cucumber/cucumber.png" alt="きゅうりの中華和え">
-
+        <div class="image-box">
+            <img src="chuuka/kyuuri.png" alt="きゅうりの中華和え">
         </div>
 
         <h2>きゅうりの中華和え</h2>
 
-        <p class="level">★☆☆</p>
+        <div class="star">★☆☆</div>
 
     </a>
 
-    <a href="kakitama.html" class="card">
+    <!-- 3 -->
+    <a href="kakitama.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape green"></div>
-
-            <img src="kakitama/kakitama.png" alt="中華風かきたまスープ">
-
+        <div class="image-box">
+            <img src="chuuka/kakitama.png" alt="中華風かきたまスープ">
         </div>
 
         <h2>中華風かきたまスープ</h2>
 
-        <p class="level">★★☆</p>
+        <div class="star">★★☆</div>
 
     </a>
 
-    <a href="harusame.html" class="card">
+    <!-- 4 -->
+    <a href="harusame.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape orange"></div>
-
-            <img src="harusame/harusame.png" alt="春雨サラダ">
-
+        <div class="image-box">
+            <img src="chuuka/harusame.png" alt="春雨サラダ">
         </div>
 
         <h2>春雨サラダ</h2>
 
-        <p class="level">★★☆</p>
+        <div class="star">★★☆</div>
 
     </a>
 
-    <a href="yasaiitame.html" class="card">
+    <!-- 5 -->
+    <a href="yasaiitame.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape blue"></div>
-
-            <img src="yasaiitame/yasaiitame.png" alt="野菜炒め">
-
+        <div class="image-box">
+            <img src="chuuka/yasaiitame.png" alt="野菜炒め">
         </div>
 
         <h2>野菜炒め</h2>
 
-        <p class="level">★★★</p>
+        <div class="star">★★★</div>
 
     </a>
 
-    <a href="friedrice.html" class="card">
+    <!-- 6 -->
+    <a href="chaahan.html" class="recipe-card">
 
-        <div class="photo">
-
-            <div class="tape lime"></div>
-
-            <img src="friedrice/friedrice.png" alt="チャーハン">
-
+        <div class="image-box">
+            <img src="chuuka/chaahan.png" alt="チャーハン">
         </div>
 
         <h2>チャーハン</h2>
 
-        <p class="level">★★★</p>
+        <div class="star">★★★</div>
 
     </a>
 
+</section>
+
 </main>
-
-<script>
-
-const open=document.getElementById("open");
-const close=document.getElementById("close");
-const menu=document.getElementById("side-menu");
-const bg=document.getElementById("menu-bg");
-
-open.onclick=function(){
-
-    menu.classList.add("show");
-    bg.classList.add("show");
-
-}
-
-close.onclick=function(){
-
-    menu.classList.remove("show");
-    bg.classList.remove("show");
-
-}
-
-bg.onclick=function(){
-
-    menu.classList.remove("show");
-    bg.classList.remove("show");
-
-}
-
-</script>
 
 </body>
 
