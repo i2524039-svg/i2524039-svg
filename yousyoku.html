@@ -2,164 +2,121 @@
 <html lang="ja">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>洋食レシピ一覧</title>
-
-    <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="yousyoku.css">
 </head>
 
 <body>
 
-<!--==========================
-ハンバーガーメニュー
-===========================-->
+    <!-- ヘッダー -->
+    <header>
 
-<div id="menu-bg"></div>
+        <div class="logo">
+            洋食レシピ一覧
+        </div>
 
-<nav id="side-menu">
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <button id="close">×</button>
+    </header>
 
-    <ul>
-        <li><a href="buttertoast.html">バタートースト</a></li>
-        <li><a href="hamcheese.html">ハムチーズサンド</a></li>
-        <li><a href="scramble.html">スクランブルエッグ</a></li>
-        <li><a href="cornsoup.html">コーンスープ</a></li>
-        <li><a href="frenchtoast.html">フレンチトースト</a></li>
-        <li><a href="omurice.html">オムライス</a></li>
-    </ul>
+    <main>
 
-    <div class="top-box">
-        <a href="index.html" class="top-link">TOPへ戻る</a>
-    </div>
+        <section class="recipe-list">
 
-</nav>
+            <!-- 1 -->
+            <a href="buttertoast.html" class="recipe-card">
 
-<!--==========================
-ヘッダー
-===========================-->
+                <div class="image-box">
+                    <div class="tape green"></div>
+                    <img src="yousyoku/btt.png" alt="バタートースト">
+                </div>
 
-<header>
+                <h2>バタートースト</h2>
 
-    <a href="index.html" class="back-btn">
-        洋食レシピ一覧
-    </a>
+                <div class="star">★☆☆</div>
 
-    <div class="menu" id="open">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+            </a>
 
-</header>
+            <!-- 2 -->
+            <a href="hamcheese.html" class="recipe-card">
 
-<!--==========================
-一覧
-===========================-->
+                <div class="image-box">
+                    <div class="tape blue"></div>
+                    <img src="yousyoku/ham.png" alt="ハムチーズサンド">
+                </div>
 
-<main class="grid">
+                <h2>ハムチーズサンド</h2>
 
-    <a href="buttertoast.html" class="recipe-card">
+                <div class="star">★☆☆</div>
 
-        <div class="tape" style="background:#8BE66E;"></div>
+            </a>
 
-        <img src="images/buttertoast.png" alt="バタートースト">
+            <!-- 3 -->
+            <a href="scramble.html" class="recipe-card">
 
-        <h2>バタートースト</h2>
+                <div class="image-box">
+                    <div class="tape purple"></div>
+                    <img src="yousyoku/sk.png" alt="スクランブルエッグ">
+                </div>
 
-        <p>★☆☆</p>
+                <h2>スクランブルエッグ</h2>
 
-    </a>
+                <div class="star">★★☆</div>
 
-    <a href="hamcheese.html" class="recipe-card">
+            </a>
 
-        <div class="tape" style="background:#84E8EF;"></div>
+            <!-- 4 -->
+            <a href="cornsoup.html" class="recipe-card">
 
-        <img src="images/hamcheese.png" alt="ハムチーズサンド">
+                <div class="image-box">
+                    <div class="tape green"></div>
+                    <img src="yousyoku/kns.png" alt="コーンスープ">
+                </div>
 
-        <h2>ハムチーズサンド</h2>
+                <h2>コーンスープ</h2>
 
-        <p>★☆☆</p>
+                <div class="star">★★☆</div>
 
-    </a>
+            </a>
 
-    <a href="scramble.html" class="recipe-card">
+            <!-- 5 -->
+            <a href="frenchtoast.html" class="recipe-card">
 
-        <div class="tape" style="background:#AAA9F8;"></div>
+                <div class="image-box">
+                    <div class="tape pink"></div>
+                    <img src="yousyoku/hrt.png" alt="フレンチトースト">
+                </div>
 
-        <img src="images/scramble.png" alt="スクランブルエッグ">
+                <h2>フレンチトースト</h2>
 
-        <h2>スクランブルエッグ</h2>
+                <div class="star">★★★</div>
 
-        <p>★★☆</p>
+            </a>
 
-    </a>
+            <!-- 6 -->
+            <a href="omurice.html" class="recipe-card">
 
-    <a href="cornsoup.html" class="recipe-card">
+                <div class="image-box">
+                    <div class="tape orange"></div>
+                    <img src="yousyoku/omuraisu.png" alt="オムライス">
+                </div>
 
-        <div class="tape" style="background:#A6F4B7;"></div>
+                <h2>オムライス</h2>
 
-        <img src="images/cornsoup.png" alt="コーンスープ">
+                <div class="star">★★★</div>
 
-        <h2>コーンスープ</h2>
+            </a>
 
-        <p>★★☆</p>
+        </section>
 
-    </a>
-
-    <a href="frenchtoast.html" class="recipe-card">
-
-        <div class="tape" style="background:#FF9F9F;"></div>
-
-        <img src="images/frenchtoast.png" alt="フレンチトースト">
-
-        <h2>フレンチトースト</h2>
-
-        <p>★★★</p>
-
-    </a>
-
-    <a href="omurice.html" class="recipe-card">
-
-        <div class="tape" style="background:#FFC38B;"></div>
-
-        <img src="images/omurice.png" alt="オムライス">
-
-        <h2>オムライス</h2>
-
-        <p>★★★</p>
-
-    </a>
-
-</main>
-
-<script>
-
-const open=document.getElementById("open");
-const close=document.getElementById("close");
-const menu=document.getElementById("side-menu");
-const bg=document.getElementById("menu-bg");
-
-open.onclick=()=>{
-    menu.classList.add("show");
-    bg.classList.add("show");
-}
-
-close.onclick=()=>{
-    menu.classList.remove("show");
-    bg.classList.remove("show");
-}
-
-bg.onclick=()=>{
-    menu.classList.remove("show");
-    bg.classList.remove("show");
-}
-
-</script>
+    </main>
 
 </body>
+
 </html>

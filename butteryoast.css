@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*=========================
+リセット
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#222;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/*=========================
+ヘッダー
+=========================*/
+
+header{
+    width:90%;
+    margin:30px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:42px;
+    font-weight:500;
+}
+
+.menu{
+    width:42px;
+    cursor:pointer;
+}
+
+.menu span{
+    display:block;
+    height:4px;
+    background:#000;
+    margin:8px 0;
+    border-radius:5px;
+}
+
+/*=========================
+メイン画像
+=========================*/
+
+.main-photo{
+    width:70%;
+    margin:20px auto;
+    position:relative;
+}
+
+.main-photo img{
+    width:100%;
+    border-radius:15px;
+}
+
+.tape{
+    width:170px;
+    height:38px;
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%) rotate(7deg);
+    opacity:.7;
+}
+
+.green{
+    background:#8EF57A;
+}
+
+/*=========================
+難易度
+=========================*/
+
+.difficulty{
+    width:70%;
+    margin:20px auto 40px;
+    text-align:right;
+    font-size:30px;
+}
+
+.star{
+    color:#FFD700;
+    display:inline-block;
+    margin-left:15px;
+}
+
+/*=========================
+情報ボックス
+=========================*/
+
+.info{
+    width:90%;
+    margin:0 auto 70px;
+    display:flex;
+    gap:25px;
+}
+
+.box{
+    flex:1;
+    background:#DDEEFF;
+    border-radius:15px;
+    padding:25px;
+}
+
+.box h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+.box ul{
+    list-style:none;
+}
+
+.box li{
+    margin:14px 0;
+    font-size:20px;
+}
