@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
+
+/*=========================
+リセット
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#FFF8DC;
+    font-family:"Zen Maru Gothic",sans-serif;
+    color:#000;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/*=========================
+ヘッダー
+=========================*/
+
+header{
+    width:90%;
+    margin:30px auto 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    background:#FFD9D9;
+    padding:14px 28px;
+    border-radius:40px;
+    font-size:28px;
+    font-weight:500;
+}
+
+.menu{
+    width:42px;
+}
+
+.menu span{
+    display:block;
+    height:3px;
+    background:#000;
+    margin:8px 0;
+    border-radius:3px;
+}
+
+/*=========================
+レシピ一覧
+=========================*/
+
+.recipe-list{
+    width:90%;
+    margin:70px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px 60px;
+}
+
+.recipe-card{
+    transition:.25s;
+}
+
+.recipe-card:hover{
+    transform:scale(1.05);
+}
+
+.image-box{
+    position:relative;
+}
+
+.recipe-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+}
+
+.recipe-card h2{
+    margin-top:18px;
+    font-size:24px;
+    font-weight:500;
+}
+
+.level{
+    margin-top:10px;
+    font-size:32px;
+    color:#FFD700;
+    letter-spacing:2px;
+}
+
+.level span{
+    color:#B5B5B5;
+}
+
+/*=========================
+テープ
+=========================*/
+
+.image-box::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:40px;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%) rotate(-2deg);
+    opacity:.7;
+}
+
+/*=========================
+スマホ
+=========================*/
+
+@media(max-width:768px){
+
+header{
+    width:95%;
+}
+
+.logo{
+    font-size:20px;
+    padding:10px 20px;
+}
+
+.recipe-list{
+    width:95%;
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+.recipe-card h2{
+    font-size:22px;
+}
+
+.level{
+    font-size:26px;
+}
+
+.image-box::before{
+    width:120px;
+    height:32px;
+}
+
+}
