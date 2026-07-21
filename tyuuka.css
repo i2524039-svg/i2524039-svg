@@ -51,7 +51,7 @@ header{
 .menu span{
     display:block;
     height:3px;
-    background:#000;
+    background:#000000;
     margin:8px 0;
     border-radius:3px;
 }
@@ -103,41 +103,6 @@ header{
     color:#B5B5B5;
 }
 
-/*=========================
-付箋
-=========================*/
-
-.memo{
-    position:absolute;
-    width:120px;
-    height:34px;
-    opacity:.75;
-    transform:rotate(-5deg);
-    top:-14px;
-    left:90px;
-}
-
-/* 色違い */
-
-.blue{
-    background:#82E5FF;
-}
-
-.pink{
-    background:#FF9DAA;
-}
-
-.orange{
-    background:#FFBF80;
-}
-
-.green{
-    background:#A8F57A;
-}
-
-.purple{
-    background:#B9B5FF;
-}
 
 /*=========================
 スマホ対応
