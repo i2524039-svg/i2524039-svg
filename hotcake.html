@@ -158,6 +158,30 @@
 
 </main>
 
+<script>
+
+const open=document.getElementById("open");
+const close=document.getElementById("close");
+const menu=document.getElementById("side-menu");
+const bg=document.getElementById("menu-bg");
+
+open.onclick=function(){
+    menu.classList.add("show");
+    bg.classList.add("show");
+}
+
+close.onclick=function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+bg.onclick=function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+</script>
+
 </body>
 
 </html>
