@@ -10,16 +10,6 @@
 
 <body>
 
-<!--==========================
-ハンバーガーメニュー
-===========================-->
-
-<div id="menu-bg"></div>
-
-<nav id="side-menu">
-
-    <button id="close">×</button>
-
     <!--==========================
 ハンバーガーメニュー
 ===========================-->
@@ -56,7 +46,7 @@
             洋食レシピ一覧
         </div>
 
-        <div class="menu">
+       <div class="menu" id="open">
             <span></span>
             <span></span>
             <span></span>
@@ -148,6 +138,31 @@
         </section>
 
     </main>
+
+<script>
+
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+const menu = document.getElementById("side-menu");
+const bg = document.getElementById("menu-bg");
+
+open.onclick = function () {
+    menu.classList.add("show");
+    bg.classList.add("show");
+}
+
+close.onclick = function () {
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+bg.onclick = function () {
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+</script>
+
 
 </body>
 
