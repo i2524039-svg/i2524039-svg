@@ -2,10 +2,14 @@
 <html lang="ja">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>洋食レシピ一覧</title>
+
     <link rel="stylesheet" href="yousyoku.css">
+
 </head>
 
 <body>
@@ -22,7 +26,7 @@
 
     <ul>
 
-        <li><a href="washoku.html">和食レシピ</a></li>
+        <li><a href="wasyoku.html">和食レシピ</a></li>
         <li><a href="yousyoku.html">洋食レシピ</a></li>
         <li><a href="tyuuka.html">中華レシピ</a></li>
         <li><a href="okasi.html">お菓子レシピ</a></li>
@@ -35,109 +39,119 @@
 
     </div>
 
-
 </nav>
 
+<header>
 
+    <div class="logo">
+        洋食レシピ一覧
+    </div>
 
-    <header>
+    <div class="menu" id="open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-        <div class="logo">
-            洋食レシピ一覧
+</header>
+
+<main>
+
+<section class="recipe-list">
+
+    <!-- 1 -->
+    <a href="buttertoast.html" class="recipe-card">
+
+        <div class="image-box">
+            <img src="yousyoku/btt.png" alt="バタートースト">
         </div>
 
-       <div class="menu" id="open">
-            <span></span>
-            <span></span>
-            <span></span>
+        <h2>バタートースト</h2>
+
+        <div class="level">
+            ★<span>☆☆</span>
         </div>
 
-    </header>
+    </a>
 
-    <main>
+    <!-- 2 -->
+    <a href="hamcheese.html" class="recipe-card">
 
-        <section class="recipe-list">
+        <div class="image-box">
+            <img src="yousyoku/ham.png" alt="ハムチーズサンド">
+        </div>
 
-            <!-- 1 -->
-            <a href="buttertoast.html" class="recipe-card">
+        <h2>ハムチーズサンド</h2>
 
-                <img src="yousyoku/btt.png" alt="バタートースト">
+        <div class="level">
+            ★<span>☆☆</span>
+        </div>
 
-                <h2>バタートースト</h2>
+    </a>
 
-                <div class="level">
-                    ★<span>☆☆</span>
-                </div>
+    <!-- 3 -->
+    <a href="scramble.html" class="recipe-card">
 
-            </a>
+        <div class="image-box">
+            <img src="yousyoku/sk.png" alt="スクランブルエッグ">
+        </div>
 
-            <!-- 2 -->
-            <a href="hamcheese.html" class="recipe-card">
+        <h2>スクランブルエッグ</h2>
 
-                <img src="yousyoku/ham.png" alt="ハムチーズサンド">
+        <div class="level">
+            ★★<span>☆</span>
+        </div>
 
-                <h2>ハムチーズサンド</h2>
+    </a>
 
-                <div class="level">
-                    ★<span>☆☆</span>
-                </div>
+    <!-- 4 -->
+    <a href="cornsoup.html" class="recipe-card">
 
-            </a>
+        <div class="image-box">
+            <img src="yousyoku/kns.png" alt="コーンスープ">
+        </div>
 
-            <!-- 3 -->
-            <a href="scramble.html" class="recipe-card">
+        <h2>コーンスープ</h2>
 
-                <img src="yousyoku/sk.png" alt="スクランブルエッグ">
+        <div class="level">
+            ★★<span>☆</span>
+        </div>
 
-                <h2>スクランブルエッグ</h2>
+    </a>
 
-                <div class="level">
-    ★★<span>☆</span>
-</div>
-            </a>
+    <!-- 5 -->
+    <a href="frenchtoast.html" class="recipe-card">
 
-            <!-- 4 -->
-            <a href="cornsoup.html" class="recipe-card">
+        <div class="image-box">
+            <img src="yousyoku/hrt.png" alt="フレンチトースト">
+        </div>
 
-                <img src="yousyoku/kns.png" alt="コーンスープ">
+        <h2>フレンチトースト</h2>
 
-                <h2>コーンスープ</h2>
+        <div class="level">
+            ★★★
+        </div>
 
-                <div class="level">
-                    ★★<span>☆</span>
-                </div>
+    </a>
 
-            </a>
+    <!-- 6 -->
+    <a href="omurice.html" class="recipe-card">
 
-            <!-- 5 -->
-            <a href="frenchtoast.html" class="recipe-card">
+        <div class="image-box">
+            <img src="yousyoku/omuraisu.png" alt="オムライス">
+        </div>
 
-                <img src="yousyoku/hrt.png" alt="フレンチトースト">
+        <h2>オムライス</h2>
 
-                <h2>フレンチトースト</h2>
+        <div class="level">
+            ★★★
+        </div>
 
-                <div class="level">
-                    ★★★
-                </div>
+    </a>
 
-            </a>
+</section>
 
-            <!-- 6 -->
-            <a href="omurice.html" class="recipe-card">
-
-                <img src="yousyoku/omuraisu.png" alt="オムライス">
-
-                <h2>オムライス</h2>
-
-                <div class="level">
-                    ★★★
-                </div>
-
-            </a>
-
-        </section>
-
-    </main>
+</main>
 
 <script>
 
@@ -163,8 +177,5 @@ bg.onclick = function () {
 
 </script>
 
-
 </body>
-
 </html>
-

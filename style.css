@@ -43,6 +43,7 @@ header{
 
 .menu{
     width:42px;
+    cursor:pointer;
 }
 
 .menu span{
@@ -51,6 +52,86 @@ header{
     background:#000;
     margin:8px 0;
     border-radius:3px;
+}
+
+/*=========================
+ハンバーガーメニュー
+=========================*/
+
+#menu-bg{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:998;
+}
+
+#menu-bg.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:320px;
+    height:100%;
+    background:#FFFDF5;
+    box-shadow:-5px 0 15px rgba(0,0,0,.15);
+    padding:35px 25px;
+    transition:.3s;
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+}
+
+#side-menu.show{
+    right:0;
+}
+
+#close{
+    border:none;
+    background:none;
+    font-size:42px;
+    cursor:pointer;
+    align-self:flex-end;
+}
+
+#side-menu ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+#side-menu li{
+    margin-bottom:20px;
+}
+
+#side-menu a{
+    text-decoration:none;
+    color:#000;
+    font-size:24px;
+    font-weight:500;
+    transition:.25s;
+}
+
+#side-menu a:hover{
+    color:#F39A3D;
+}
+
+.top-box{
+    margin-top:auto;
+    text-align:center;
+}
+
+.top-link{
+    text-decoration:none;
+    color:#000;
+    font-size:28px;
+    font-weight:500;
 }
 
 /*=========================
@@ -75,48 +156,8 @@ section{
     border-radius:28px;
 }
 
-
 /*=========================
-スライドショー
-=========================*/
-
-.slider{
-    width:90%;
-    margin:40px auto 80px;
-    overflow:hidden;
-    border-radius:22px;
-}
-
-.slide-track{
-    display:flex;
-    width:calc(340px * 16);
-    animation:slide 40s linear infinite;
-}
-
-.slide-track img{
-    width:320px;
-    height:220px;
-    object-fit:cover;
-    margin-right:20px;
-    border-radius:20px;
-    flex-shrink:0;
-}
-
-@keyframes slide{
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(calc(-340px * 8));
-    }
-}
-
-
-
-
-/*=========================
-キャッチコピー
+基本知識
 =========================*/
 
 .message{
@@ -131,13 +172,9 @@ section{
 
 .message p{
     font-size:24px;
-    font-weight:400;
     line-height:60px;
+    margin-bottom:150px;
 }
-
-/*=========================
-基本知識
-=========================*/
 
 .knowledge{
     display:flex;
@@ -150,47 +187,58 @@ section{
     flex:1;
 }
 
-/* リンク全体をクリックできるようにする */
 .knowledge .item a{
     display:block;
     text-decoration:none;
     color:#000;
 }
 
-/* タイトル＋アイコン */
 .knowledge h3{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:10px;
-
     font-size:30px;
     font-weight:500;
-    line-height:69px;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
-/* アイコンだけ小さくする */
+.knowledge h3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-size:30px;
+    font-weight:500;
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+.knowledge .item a:hover h3{
+    transform:scale(1.05);
+}
+
 .knowledge .icon{
-    width:42px;
-    height:42px;
+    width:32px;
+    height:32px;
     object-fit:contain;
     flex-shrink:0;
+    display:inline-block;
 }
 
-/* 下の大きい画像 */
 .knowledge img:not(.icon){
     width:100%;
     aspect-ratio:1/1;
     object-fit:cover;
     border-radius:22px;
-    transition:0.3s;
+    transition:.3s;
 }
 
-/* ホバー */
 .knowledge .item a:hover img:not(.icon){
     transform:scale(1.03);
 }
+
 /*=========================
 レシピ
 =========================*/
@@ -217,16 +265,14 @@ section{
     text-decoration:none;
     color:#000;
     text-align:center;
-
     font-size:40px;
     font-weight:500;
     line-height:72px;
-
     padding:12px 0;
     border-radius:40px;
-
-    transition:0.25s;
+    transition:.25s;
 }
+
 .washoku{
     background:#D8E6FF;
 }
@@ -251,7 +297,6 @@ section{
     transform:scale(1.03);
 }
 
-
 /*=========================
 FAQ
 =========================*/
@@ -268,8 +313,6 @@ FAQ
     line-height:137.5px;
     margin-bottom:80px;
 }
-
-/* 共通 */
 
 .question{
     display:flex;
@@ -305,11 +348,8 @@ FAQ
 
 .question p{
     font-size:20px;
-    font-weight:400;
     line-height:50px;
 }
-
-/* 左右配置 */
 
 .question.left{
     flex-direction:row;
@@ -346,7 +386,7 @@ footer p{
 スマホ対応
 =========================*/
 
-@media (max-width:768px){
+@media(max-width:768px){
 
     header{
         width:95%;
@@ -388,15 +428,16 @@ footer p{
     }
 
     .category{
-        flex-wrap:wrap;
-        gap:15px;
-    }
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
 
-    .category a{
-        flex:0 0 48%;
-        font-size:28px;
-        line-height:60px;
-    }
+.category a{
+    width:220px;
+    flex:none;
+}
 
     .question,
     .question.left,
@@ -433,23 +474,51 @@ footer p{
         line-height:60px;
     }
 
+    /* ハンバーガーメニュー */
+
+    #side-menu{
+        width:280px;
+        right:-280px;
+    }
+
+    #side-menu a{
+        font-size:20px;
+    }
+
+    .top-link{
+        font-size:22px;
+    }
+
 }
+
+/*=========================
+スライドショー
+=========================*/
 
 .slider{
     width:95%;
+    margin:40px auto 80px;
+    overflow:hidden;
+    border-radius:22px;
 }
 
 .slide-track{
+    display:flex;
     width:calc(265px * 16);
+    animation:slide 40s linear infinite;
 }
 
 .slide-track img{
     width:250px;
     height:170px;
+    object-fit:cover;
     margin-right:15px;
+    border-radius:20px;
+    flex-shrink:0;
 }
 
 @keyframes slide{
+
     from{
         transform:translateX(0);
     }
@@ -457,4 +526,5 @@ footer p{
     to{
         transform:translateX(calc(-265px * 8));
     }
+
 }
