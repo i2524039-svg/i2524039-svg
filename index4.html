@@ -10,6 +10,34 @@
 
 <body>
 
+<!--==========================
+ハンバーガーメニュー
+===========================-->
+
+<div id="menu-bg"></div>
+
+<nav id="side-menu">
+
+    <button id="close">×</button>
+
+    <ul>
+
+        <li><a href="index2.html">必要な道具</a></li>
+        <li><a href="index3.html">料理を始める前に</a></li>
+        <li><a href="index4.html">包丁の基本</a></li>
+        
+    </ul>
+ <div class="top-box">
+        <a href="index.html" class="top-link">TOPへ戻る</a>
+    </div>
+
+
+</nav>
+
+<main>
+
+
+
     <!-- ヘッダー -->
     <header>
 
@@ -17,7 +45,7 @@
             包丁の使い方の基本
         </div>
 
-        <div class="menu">
+       <div class="menu" id="open">
             <span></span>
             <span></span>
             <span></span>
@@ -172,7 +200,30 @@
         <a href="index.html">← TOPへ戻る</a>
 
     </footer>
+<script>
+
+const open = document.getElementById("open");
+const close = document.getElementById("close");
+const menu = document.getElementById("side-menu");
+const bg = document.getElementById("menu-bg");
+
+open.onclick = function(){
+    menu.classList.add("show");
+    bg.classList.add("show");
+}
+
+close.onclick = function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+bg.onclick = function(){
+    menu.classList.remove("show");
+    bg.classList.remove("show");
+}
+
+</script>
 
 </body>
-
 </html>
+
