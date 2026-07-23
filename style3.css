@@ -112,21 +112,17 @@ header{
 #side-menu a{
     text-decoration:none;
     color:#000;
-    font-size:24px;
-    font-weight:500;
+    font-size:22px;
+    transition:0.25s;
+}
+
+#side-menu a:hover{
+    color:#F39A3D;
 }
 
 .top-box{
     margin-top:auto;
     text-align:center;
-}
-
-.top-link{
-    display:block;
-    text-decoration:none;
-    color:#000;
-    font-size:28px;
-    font-weight:500;
 }
 
 .top-link{

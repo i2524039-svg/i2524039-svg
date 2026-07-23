@@ -43,6 +43,7 @@ header{
 
 .menu{
     width:42px;
+    cursor:pointer;
 }
 
 .menu span{
@@ -56,19 +57,6 @@ header{
 /*=========================
 ハンバーガーメニュー
 =========================*/
-
-.menu{
-    width:42px;
-    cursor:pointer;
-}
-
-.menu span{
-    display:block;
-    height:3px;
-    background:#000;
-    margin:8px 0;
-    border-radius:3px;
-}
 
 #menu-bg{
     position:fixed;
@@ -96,7 +84,6 @@ header{
     padding:35px 25px;
     transition:.3s;
     z-index:999;
-
     display:flex;
     flex-direction:column;
 }
@@ -125,8 +112,12 @@ header{
 #side-menu a{
     text-decoration:none;
     color:#000;
-    font-size:24px;
-    font-weight:500;
+    font-size:22px;
+    transition:0.25s;
+}
+
+#side-menu a:hover{
+    color:#F39A3D;
 }
 
 .top-box{
@@ -140,6 +131,7 @@ header{
     font-size:28px;
     font-weight:500;
 }
+
 
 /*=========================
 共通
@@ -217,8 +209,10 @@ section{
 }
 
 .card ul{
-    margin-top:10px;
-    margin-left:25px;
+    width:fit-content;
+    margin:20px auto;
+    padding-left:25px;
+    text-align:left;
 }
 
 .card li{
