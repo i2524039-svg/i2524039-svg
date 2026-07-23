@@ -145,7 +145,7 @@ main{
 上段
 =========================*/
 
-.top-area{
+.top-box{
     display:flex;
     gap:25px;
     margin-bottom:60px;
@@ -310,7 +310,7 @@ footer a:hover{
 スマホ
 =========================*/
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 header{
     width:95%;
@@ -323,51 +323,97 @@ header{
 
 main{
     width:95%;
+    margin:30px auto;
 }
 
-.top-area{
-    flex-direction:column;
+/* 上段を1列に */
+
+.top-box{
+    display:block;
 }
 
 .card{
     width:100%;
+    margin-bottom:25px;
+    padding:20px;
 }
 
+.card:last-child{
+    margin-bottom:0;
+}
+
+.card h2{
+    font-size:30px;
+}
+
+.point h3,
+.tips-text h3{
+    font-size:22px;
+}
+
+.point p,
+.tips-text p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* コツ */
+
 .tips{
-    flex-direction:column;
+    display:block;
 }
 
 .tips img{
     width:100%;
     height:auto;
+    margin-top:15px;
+}
+
+/* 下段 */
+
+.basic{
+    padding:20px;
 }
 
 .basic h2{
-    font-size:30px;
+    font-size:32px;
 }
 
 .basic-row{
-    flex-direction:column;
+    display:block;
 }
 
 .basic-card{
-    flex-direction:column;
-    align-items:flex-start;
+    display:block;
+    padding:20px 0;
     border-right:none !important;
     border-bottom:2px solid #D7E8EC;
 }
 
-.basic-card:last-child{
+.basic-row:last-child .basic-card:last-child{
     border-bottom:none;
 }
 
 .basic-card img{
     width:100%;
     height:auto;
-    margin-top:20px;
+    margin-top:15px;
 }
 
-/* ハンバーガーメニュー */
+.basic-card .text{
+    margin-right:0;
+}
+
+.basic-card h3{
+    font-size:22px;
+}
+
+.basic-card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ハンバーガー */
 
 #side-menu{
     width:280px;
@@ -381,4 +427,9 @@ main{
 .top-link{
     font-size:28px;
 }
+
+footer a{
+    font-size:20px;
+}
+
 }
